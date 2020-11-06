@@ -123,7 +123,7 @@ module "base2" {
   name_prefix = "suma-qam-41-"
   use_avahi   = false
   domain      = "mgr.prv.suse.net"
-  images      = [ "sles11sp4", "sles12sp4o", "sles15o", "centos6o", "centos7o" ]
+  images      = [ "sles11sp4", "sles12sp4", "sles15", "centos6o", "centos7o" ]
 
   mirror = "minima-mirror-qam.mgr.prv.suse.net"
   use_mirror_images = true
@@ -149,7 +149,7 @@ module "base3" {
   name_prefix = "suma-qam-41-"
   use_avahi   = false
   domain      = "mgr.prv.suse.net"
-  images      = [ "sles15sp1o", "ubuntu1604o", "ubuntu1804o", "ubuntu2004o", "centos8o" ]
+  images      = [ "sles15sp1", "ubuntu1604o", "ubuntu1804o", "ubuntu2004o", "centos8o" ]
 
   mirror = "minima-mirror-qam.mgr.prv.suse.net"
   use_mirror_images = true
@@ -234,7 +234,7 @@ module "sles12sp4-client" {
   base_configuration = module.base2.configuration
   product_version    = "4.1-released"
   name               = "cli-sles12sp4"
-  image              = "sles12sp4o"
+  image              = "sles12sp4"
   provider_settings = {
     mac                = "aa:b2:92:de:8b:4b"
     memory             = 4096
@@ -281,7 +281,7 @@ module "sles15-client" {
   base_configuration = module.base2.configuration
   product_version    = "4.1-released"
   name               = "cli-sles15"
-  image              = "sles15o"
+  image              = "sles15"
   provider_settings = {
     mac                = "aa:b2:92:56:49:43"
     memory             = 4096
@@ -305,7 +305,7 @@ module "sles15sp1-client" {
   base_configuration = module.base3.configuration
   product_version    = "4.1-released"
   name               = "cli-sles15sp1"
-  image              = "sles15sp1o"
+  image              = "sles15sp1"
   provider_settings = {
     mac                = "aa:b2:92:7a:84:9e"
     memory             = 4096
@@ -375,7 +375,7 @@ module "sles12sp4-minion" {
   base_configuration = module.base2.configuration
   product_version    = "4.1-released"
   name               = "min-sles12sp4"
-  image              = "sles12sp4o"
+  image              = "sles12sp4"
   provider_settings = {
     mac                = "aa:b2:92:9a:94:c9"
     memory             = 4096
@@ -423,7 +423,7 @@ module "sles15-minion" {
   base_configuration = module.base2.configuration
   product_version    = "4.1-released"
   name               = "min-sles15"
-  image              = "sles15o"
+  image              = "sles15"
   provider_settings = {
     mac                = "aa:b2:92:82:63:59"
     memory             = 4096
@@ -448,7 +448,7 @@ module "sles15sp1-minion" {
   base_configuration = module.base3.configuration
   product_version    = "4.1-released"
   name               = "min-sles15sp1"
-  image              = "sles15sp1o"
+  image              = "sles15sp1"
   provider_settings = {
     mac                = "aa:b2:92:ca:f7:a9"
     memory             = 4096
@@ -615,7 +615,7 @@ module "sles12sp4-sshminion" {
   base_configuration = module.base2.configuration
   product_version    = "4.1-released"
   name               = "minssh-sles12sp4"
-  image              = "sles12sp4o"
+  image              = "sles12sp4"
   provider_settings = {
     mac                = "aa:b2:92:9a:51:7b"
     memory             = 4096
@@ -651,7 +651,7 @@ module "sles15-sshminion" {
   base_configuration = module.base2.configuration
   product_version    = "4.1-released"
   name               = "minssh-sles15"
-  image              = "sles15o"
+  image              = "sles15"
   provider_settings = {
     mac                = "aa:b2:92:8a:f9:39"
     memory             = 4096
@@ -668,7 +668,7 @@ module "sles15sp1-sshminion" {
   base_configuration = module.base3.configuration
   product_version    = "4.1-released"
   name               = "minssh-sles15sp1"
-  image              = "sles15sp1o"
+  image              = "sles15sp1"
   provider_settings = {
     mac                = "aa:b2:92:ee:ad:30"
     memory             = 4096
